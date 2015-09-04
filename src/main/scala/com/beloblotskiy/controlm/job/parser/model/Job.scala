@@ -3,7 +3,7 @@ package com.beloblotskiy.controlm.job.parser.model
 /**
  * @author abelablotski
  */
-case class Job (dataCenter: DataCenter, 
+case class Job (
     table: Table, 
     application: String, 
     jobName: String,

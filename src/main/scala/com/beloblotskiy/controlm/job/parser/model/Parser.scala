@@ -66,13 +66,12 @@ object Parser {
   }
     
   /**
-   * Parse Job attributes
-   * @param node The <JOB> node
+   * Parse Job attributes.
+   * @param node The <JOB> node.
    */
-  private def parseJob(job: Node) = {
+  private def parseJob(job: Node, parentTable: Table): Job = {
     new Job(
-        DataCenter("dataCenter"), 
-        Table("table"), 
+        parentTable, 
         parseAttrStr(job, "APPLICATION"), 
         jobName = parseAttrStr(job, "JOBNAME"),
         cyclic = parseAttrBool(job, "CYCLIC"),
@@ -84,11 +83,18 @@ object Parser {
         outConds = parseOutConds(job)
     )
   }
+  
+  /**
+   * Parse Table attributes and set of table's nested jobs.
+   * @param table The <TABLE> node.
+   */
+  private def parseTable(table: Node): List[Job] = {
+    val parentTable = Table(parseAttrStr(table, "TABLE_NAME"), parseAttrStr(table, "DATACENTER"))
+    (for { j <- (table \ "JOB") } yield parseJob(j, parentTable)).toList
+  }
     
   def parse(xmlDoc: String): List[Job] = {
     val xml = XML.loadString(xmlDoc)
-    var result: MutableList[Job] = MutableList()
-    result += parseJob(xml \\ "JOB" head)
-    result.toList
+    (for { t <- (xml \\ "DEFTABLE" \ "TABLE") } yield parseTable(t)).flatten.toList 
   }
 }
