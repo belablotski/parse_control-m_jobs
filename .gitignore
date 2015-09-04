@@ -1,0 +1,21 @@
+# Java and other binaries #
+*.class
+*.cache
+*.cache-main
+*.cache-tests
+
+# Package and Compiled Files #
+*.jar
+*.war
+*.ear
+
+# Eclipse #
+.classpath
+.project
+
+/.settings/
+/bin/
+/target/
+/project/target/
+/project/project/target/
+
