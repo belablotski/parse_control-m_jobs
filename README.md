@@ -6,3 +6,4 @@ http://localhost:8080/
 
 > sbt
 > container:stop
+> container:restart

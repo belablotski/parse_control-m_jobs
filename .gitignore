@@ -1,1 +1,8 @@
+.classpath
+.project
+.cache-main
+.cache-tests
+/.settings/
+/target/
 /bin/
+/ctm_jobs/
