@@ -29,14 +29,21 @@ class ControlMJobAnalyzer extends HttpServlet {
       Parser.parse(content)
     }
     
-    val res = (for { f <- new File(path).listFiles.filter(_.getName.endsWith(".xml")) } 
-      yield {
-        val parsingRes: (List[Job], String) = try { (readAndParseFile(f), "") } catch { case e: Throwable => (List(), "ERROR: " + e.getMessage) }
-        (f.getPath, parsingRes._2, parsingRes._1)
-      }
-    )
+    val fp = new File(path)
     
-    if (res != null) res.toList else List() 
+    if (fp.exists()) {
+      val res = (for { f <- fp.listFiles.filter(_.getName.endsWith(".xml")) } 
+        yield {
+          val parsingRes: (List[Job], String) = try { (readAndParseFile(f), "") } catch { case e: Throwable => (List(), "ERROR: " + e.getMessage) }
+          (f.getPath, parsingRes._2, parsingRes._1)
+        }
+      )
+      
+      if (res != null) res.toList else List()
+    }
+    else {
+      List()      // there are no any files to read
+    }
   }
   
   override def doGet(request: HttpServletRequest, response:HttpServletResponse) = {
@@ -44,10 +51,14 @@ class ControlMJobAnalyzer extends HttpServlet {
     response.setCharacterEncoding("UTF-8")
     
     val jobs = List()
-    val result = loadFilesFromDir("D:\\Projects2\\Scala\\parse_control-m_jobs\\ctm_jobs")
+    val result = loadFilesFromDir("D:\\Projects2\\Scala\\parse_control-m_jobs\\ctm_jobs\\test3")
     
     val responseBody: NodeSeq =
-      <html><body>{ReportGenerator.generateLoadingReport(result)}</body></html>
+      <html><body>
+				{ReportGenerator.generateJobsReport(result map (x => x._3) flatten)}
+				<p></p><hr/><p></p>
+        {ReportGenerator.generateLoadingReport(result)}
+    	</body></html>
     response.getWriter.write(responseBody.toString)
   }
 }
