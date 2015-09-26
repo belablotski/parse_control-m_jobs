@@ -6,6 +6,8 @@ It became more and more useful, and finally I've desided to it put into the publ
 
 Now Control-M Job Parser consists of XML parser itself (which understand Control-M v7 jobs XML) and HTTP Servlet (which provide web-based user interface). Servlet generates one report with information about all parsed Control-M jobs, primary usage of this report is checking jobs schedule and inbount/outbound conditions.
 
+Report sample: [docs/report_samples/jobs_report.html](http://htmlpreview.github.io/?https://github.com/beloblotskiy/parse_control-m_jobs/blob/master/docs/report_samples/jobs_report.html)
+
 Usage
 -----
 Start HTTP Servlet:
