@@ -1,0 +1,157 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>
+				<table border="1">
+      <tbody><tr>
+        <th>Data center</th><th>Table</th><th>Application</th><th>Job name</th><th>Cyclic</th><th>Cyclic type</th>
+<th>Cyclic Int Seq</th><th>Cyclic Times Seq</th><th>Cyclic Tlr</th><th>Cyclic Ind</th><th>Cyclic Int</th>
+<th>Description</th><th>Task type</th><th>Controls (Resources)</th><th>In conditions</th><th>Out conditions</th>
+      </tr>
+			<tr><td>DataCenter1</td><td>CYCLIC1_EXP1</td><td>APP1</td><td>CYCLIC1_EXP1_TRANSACTIONS_FLAT_LZ_Sqoop</td><td>true</td><td>IntervalSequence</td><td>Some(+1M)</td><td>1000,1005,1010,1015,1020,1025,1030,1035,1040,1045,
+ 1050,1055,1100,1105,1110,1115,1120,1125,1130,1135, 
+1140,1145,1150,1155,1200,1205,1210,1215,1220,1225, 
+1230,1235,1240,1245,1250,1255,1300,1305,1310,1315, 
+1320,1325,1330,1335,1340,1345,1350,1355,1400,1405, 
+1410,1415,1420,1425,1430,1435,1440,1445,1450,1455, 
+1500,1505,1510,1515,1520,1525,1530,1535,1540,1545, 
+1550,1555,1600,1605,1610,1615,1620,1625,1630,1635, 
+1640,1645,1650,1655,1700,1705,1710,1715,1720,1725, 
+1730,1735,1740,1745,1750,1755</td><td>Some(5)</td><td>Some(END)</td><td>Some(00001M)</td><td>Some(Flattened transactions table)</td><td>Job</td><td><table border="1">
+					<tbody><tr><td>CYCLIC1_EXP1_TRANSACTIONS_FLAT_LZ_Sqoop-RES</td><td>E</td></tr>
+				</tbody></table></td><td><table border="1">
+          <tbody><tr><td>CYCLIC1_EXP1_SRC_DB_AVAILABLE</td><td>AND</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_TRANSACTIONS_FLAT_LZ_Sqoop-NOT_STARTED</td><td>AND</td><td>STAT</td></tr>
+        </tbody></table></td><td><table border="1">
+          <tbody><tr><td>CYCLIC1_EXP1_TRANSACTIONS_FLAT_LZ_Sqoop-ENDED</td><td>ADD</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_TRANSACTIONS_FLAT_LZ_Sqoop-NOT_STARTED</td><td>DEL</td><td>STAT</td></tr>
+        </tbody></table></td></tr><tr><td>DataCenter1</td><td>CYCLIC1_EXP1</td><td>APP1</td><td>CYCLIC1_EXP1_TRANSACTIONS_XML_LZ_Sqoop</td><td>true</td><td>IntervalSequence</td><td>Some(+1M)</td><td>1000,1005,1010,1015,1020,1025,1030,1035,1040,1045,
+ 1050,1055,1100,1105,1110,1115,1120,1125,1130,1135, 
+1140,1145,1150,1155,1200,1205,1210,1215,1220,1225, 
+1230,1235,1240,1245,1250,1255,1300,1305,1310,1315, 
+1320,1325,1330,1335,1340,1345,1350,1355,1400,1405, 
+1410,1415,1420,1425,1430,1435,1440,1445,1450,1455, 
+1500,1505,1510,1515,1520,1525,1530,1535,1540,1545, 
+1550,1555,1600,1605,1610,1615,1620,1625,1630,1635, 
+1640,1645,1650,1655,1700,1705,1710,1715,1720,1725, 
+1730,1735,1740,1745,1750,1755</td><td>Some(10)</td><td>Some(END)</td><td>Some(00001M)</td><td>Some(XML transactions table)</td><td>Job</td><td><table border="1">
+					<tbody><tr><td>CYCLIC1_EXP1_TRANSACTIONS_XML_LZ_Sqoop-RES</td><td>E</td></tr>
+				</tbody></table></td><td><table border="1">
+          <tbody><tr><td>CYCLIC1_EXP1_SRC_DB_AVAILABLE</td><td>AND</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_TRANSACTIONS_XML_LZ_Sqoop-NOT_STARTED</td><td>AND</td><td>STAT</td></tr>
+        </tbody></table></td><td><table border="1">
+          <tbody><tr><td>CYCLIC1_EXP1_TRANSACTIONS_XML_LZ_Sqoop-ENDED</td><td>ADD</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_TRANSACTIONS_XML_LZ_Sqoop-NOT_STARTED</td><td>DEL</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_TRANSACTIONS_XMLFLATTEN_DAILY-NOT_STARTED</td><td>ADD</td><td>STAT</td></tr>
+        </tbody></table></td></tr><tr><td>DataCenter1</td><td>CYCLIC1_EXP1</td><td>APP1</td><td>CYCLIC1_EXP1_TRANSACTIONS_XMLFLATTEN_DAILY</td><td>true</td><td>IntervalSequence</td><td>Some(+1M)</td><td>1000,1005,1010,1015,1020,1025,1030,1035,1040,1045,
+ 1050,1055,1100,1105,1110,1115,1120,1125,1130,1135, 
+1140,1145,1150,1155,1200,1205,1210,1215,1220,1225, 
+1230,1235,1240,1245,1250,1255,1300,1305,1310,1315, 
+1320,1325,1330,1335,1340,1345,1350,1355,1400,1405, 
+1410,1415,1420,1425,1430,1435,1440,1445,1450,1455, 
+1500,1505,1510,1515,1520,1525,1530,1535,1540,1545, 
+1550,1555,1600,1605,1610,1615,1620,1625,1630,1635, 
+1640,1645,1650,1655,1700,1705,1710,1715,1720,1725, 
+1730,1735,1740,1745,1750,1755</td><td>Some(5)</td><td>Some(END)</td><td>Some(00001M)</td><td>Some(XML Flattening)</td><td>Job</td><td><table border="1">
+					<tbody><tr><td>CYCLIC1_EXP1_TRANSACTIONS_XMLFLATTEN_DAILY-RES</td><td>E</td></tr>
+				</tbody></table></td><td><table border="1">
+          <tbody><tr><td>CYCLIC1_EXP1_TRANSACTIONS_XML_LZ_Sqoop-ENDED</td><td>AND</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_TRANSACTIONS_XMLFLATTEN_DAILY-NOT_STARTED</td><td>AND</td><td>STAT</td></tr>
+        </tbody></table></td><td><table border="1">
+          <tbody><tr><td>CYCLIC1_EXP1_TRANSACTIONS_XMLFLATTEN_DAILY-ENDED</td><td>ADD</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_TRANSACTIONS_XMLFLATTEN_DAILY-NOT_STARTED</td><td>DEL</td><td>STAT</td></tr>
+        </tbody></table></td></tr><tr><td>DataCenter1</td><td>CYCLIC1_EXP1</td><td>APP1</td><td>CYCLIC1_EXP1_COORDINATOR</td><td>true</td><td>SpecificTimes</td><td>None</td><td>1005,1015,1025,1035,1045,1055,1105,1115,1125,1135,
+ 1145,1155,1205,1215,1225,1235,1245,1255,1305,1315, 
+1325,1335,1345,1355,1405,1415,1425,1435,1445,1455, 
+1505,1515,1525,1535,1545,1555,1605,1615,1625,1635, 
+1645,1655,1705,1715,1725,1735,1745,1755</td><td>Some(5)</td><td>Some(START)</td><td>Some(00001M)</td><td>Some(the end)</td><td>Dummy</td><td><table border="1">
+					
+				</table></td><td><table border="1">
+          <tbody><tr><td>CYCLIC1_EXP1_TRANSACTIONS_FLAT_LZ_Sqoop-ENDED</td><td>AND</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_TRANSACTIONS_XML_LZ_Sqoop-ENDED</td><td>AND</td><td>STAT</td></tr>
+        </tbody></table></td><td><table border="1">
+          <tbody><tr><td>CYCLIC1_EXP1_COORDINATOR_ALL_OK</td><td>ADD</td><td>STAT</td></tr>
+        </tbody></table></td></tr><tr><td>DataCenter1</td><td>CYCLIC1_EXP1</td><td>APP1</td><td>CYCLIC1_EXP1_TRANSACTIONSVERIFICATION_LZ_Sqoop</td><td>false</td><td>SpecificTimes</td><td>None</td><td>0030,0230,0430,0630,0830,1030,1230,1430,1630,1830, 2030,2230</td><td>Some(240)</td><td>Some(START)</td><td>Some(00001M)</td><td>Some(Transaction Verification)</td><td>Job</td><td><table border="1">
+					<tbody><tr><td>CYCLIC1_EXP1_TRANSACTIONSVERIFICATION_LZ_Sqoop-RES</td><td>E</td></tr>
+				</tbody></table></td><td><table border="1">
+          
+        </table></td><td><table border="1">
+          <tbody><tr><td>CYCLIC1_EXP1_TRANSACTIONSVERIFICATION_LZ_Sqoop-ENDED</td><td>ADD</td><td>STAT</td></tr>
+        </tbody></table></td></tr><tr><td>DataCenter1</td><td>CYCLIC1_EXP1</td><td>APP1</td><td>CYCLIC1_EXP1_SRC_DB_NOT_AVAIL</td><td>true</td><td>SpecificTimes</td><td>None</td><td>1000,1010,1020,1030,1040,1050,1100,1110,1120,1130,
+ 1140,1150,1200,1210,1220,1230,1240,1250,1300,1310, 
+1320,1330,1340,1350,1400,1410,1420,1430,1440,1450, 
+1500,1510,1520,1530,1540,1550,1600,1610,1620,1630, 
+1640,1650,1700,1710,1720,1730,1740,1750</td><td>Some(10)</td><td>Some(START)</td><td>Some(00001M)</td><td>Some(The start)</td><td>Dummy</td><td><table border="1">
+					
+				</table></td><td><table border="1">
+          
+        </table></td><td><table border="1">
+          <tbody><tr><td>CYCLIC1_EXP1_SRC_DB_AVAILABLE</td><td>DEL</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_SRC_DB_NOT_AVAILABLE</td><td>ADD</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_TRANSACTIONS_FLAT_LZ_Sqoop-NOT_STARTED</td><td>DEL</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_TRANSACTIONS_XML_LZ_Sqoop-NOT_STARTED</td><td>DEL</td><td>STAT</td></tr>
+        </tbody></table></td></tr><tr><td>DataCenter1</td><td>CYCLIC1_EXP1</td><td>APP1</td><td>CYCLIC1_EXP1_SRC_DB_AVAIL</td><td>true</td><td>SpecificTimes</td><td>None</td><td>1005,1015,1025,1035,1045,1055,1105,1115,1125,1135,
+ 1145,1155,1205,1215,1225,1235,1245,1255,1305,1315, 
+1325,1335,1345,1355,1405,1415,1425,1435,1445,1455, 
+1505,1515,1525,1535,1545,1555,1605,1615,1625,1635, 
+1645,1655,1705,1715,1725,1735,1745,1755</td><td>Some(10)</td><td>Some(START)</td><td>Some(00001M)</td><td>Some(The start 2)</td><td>Dummy</td><td><table border="1">
+					
+				</table></td><td><table border="1">
+          
+        </table></td><td><table border="1">
+          <tbody><tr><td>CYCLIC1_EXP1_SRC_DB_AVAILABLE</td><td>ADD</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_SRC_DB_NOT_AVAILABLE</td><td>DEL</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_TRANSACTIONS_XML_LZ_Sqoop-NOT_STARTED</td><td>ADD</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_TRANSACTIONS_FLAT_LZ_Sqoop-NOT_STARTED</td><td>ADD</td><td>STAT</td></tr>
+        </tbody></table></td></tr><tr><td>DataCenter1</td><td>CYCLIC1_EXP1</td><td>APP1</td><td>CYCLIC1_EXP1_DUMMY_END</td><td>true</td><td>SpecificTimes</td><td>None</td><td>1005,1015,1025,1035,1045,1055,1105,1115,1125,1135,
+ 1145,1155,1205,1215,1225,1235,1245,1255,1305,1315, 
+1325,1335,1345,1355,1405,1415,1425,1435,1445,1455, 
+1505,1515,1525,1535,1545,1555,1605,1615,1625,1635, 
+1645,1655,1705,1715,1725,1735,1745,1755</td><td>Some(5)</td><td>Some(START)</td><td>Some(00001M)</td><td>Some(The end)</td><td>Dummy</td><td><table border="1">
+					
+				</table></td><td><table border="1">
+          <tbody><tr><td>CYCLIC1_EXP1_COORDINATOR_ALL_OK</td><td>AND</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_TRANSACTIONS_XMLFLATTEN_DAILY-ENDED</td><td>AND</td><td>STAT</td></tr>
+        </tbody></table></td><td><table border="1">
+          <tbody><tr><td>CYCLIC1_EXP1_DUMMY_END-ENDED</td><td>DEL</td><td>STAT</td></tr><tr><td>CYCLIC1_EXP1_TRANSACTIONS_XMLFLATTEN_DAILY-NOT_STARTED</td><td>DEL</td><td>STAT</td></tr>
+        </tbody></table></td></tr><tr><td>CTM_DC1</td><td>CTM_TABLE1</td><td>CTM_APP1</td><td>CTM_JOB_NAME1</td><td>false</td><td>Interval</td><td>None</td><td>-</td><td>None</td><td>None</td><td>Some(00001M)</td><td>Some(Ctm Test Job 1)</td><td>Job</td><td><table border="1">
+					<tbody><tr><td>TEST_CONTROL1-RES</td><td>E</td></tr>
+				</tbody></table></td><td><table border="1">
+          <tbody><tr><td>INCOND1-ENDED</td><td>AND</td><td>STAT</td></tr>
+        </tbody></table></td><td><table border="1">
+          <tbody><tr><td>OUTCOND1-ENDED</td><td>DEL</td><td>STAT</td></tr>
+        </tbody></table></td></tr><tr><td>CTM_DC1</td><td>CTM_TABLE1</td><td>CTM_APP1</td><td>CTM_JOB_NAME1</td><td>false</td><td>Interval</td><td>None</td><td>-</td><td>None</td><td>None</td><td>Some(00001M)</td><td>Some(Ctm Test Job 1)</td><td>Job</td><td><table border="1">
+					<tbody><tr><td>TEST_CONTROL1-RES</td><td>E</td></tr><tr><td>TEST_CONTROL2-RES</td><td>E</td></tr>
+				</tbody></table></td><td><table border="1">
+          <tbody><tr><td>INCOND1-ENDED</td><td>AND</td><td>STAT</td></tr><tr><td>INCOND2-ENDED</td><td>AND</td><td>STAT</td></tr>
+        </tbody></table></td><td><table border="1">
+          <tbody><tr><td>OUTCOND1-ENDED</td><td>DEL</td><td>STAT</td></tr><tr><td>OUTCOND2-ENDED</td><td>DEL</td><td>STAT</td></tr>
+        </tbody></table></td></tr><tr><td>CTM_DC1</td><td>CTM_TABLE1</td><td>CTM_APP1</td><td>CTM_JOB_NAME1</td><td>false</td><td>Interval</td><td>None</td><td>-</td><td>None</td><td>None</td><td>Some(00001M)</td><td>Some(Ctm Test Job 1)</td><td>Job</td><td><table border="1">
+					<tbody><tr><td>TEST_CONTROL1-RES</td><td>E</td></tr><tr><td>TEST_CONTROL2-RES</td><td>E</td></tr>
+				</tbody></table></td><td><table border="1">
+          <tbody><tr><td>INCOND1-ENDED</td><td>AND</td><td>STAT</td></tr><tr><td>INCOND2-ENDED</td><td>AND</td><td>STAT</td></tr>
+        </tbody></table></td><td><table border="1">
+          <tbody><tr><td>OUTCOND1-ENDED</td><td>DEL</td><td>STAT</td></tr><tr><td>OUTCOND2-ENDED</td><td>DEL</td><td>STAT</td></tr>
+        </tbody></table></td></tr><tr><td>CTM_DC1</td><td>CTM_TABLE1</td><td>CTM_APP2</td><td>CTM_JOB_NAME2</td><td>false</td><td>Interval</td><td>None</td><td>-</td><td>None</td><td>None</td><td>Some(00001M)</td><td>Some(Ctm Test Job 1)</td><td>Job</td><td><table border="1">
+					<tbody><tr><td>TEST_CONTROL1-RES</td><td>E</td></tr><tr><td>TEST_CONTROL2-RES</td><td>E</td></tr>
+				</tbody></table></td><td><table border="1">
+          <tbody><tr><td>INCOND1-ENDED</td><td>AND</td><td>STAT</td></tr><tr><td>INCOND2-ENDED</td><td>AND</td><td>STAT</td></tr>
+        </tbody></table></td><td><table border="1">
+          <tbody><tr><td>OUTCOND1-ENDED</td><td>DEL</td><td>STAT</td></tr><tr><td>OUTCOND2-ENDED</td><td>DEL</td><td>STAT</td></tr>
+        </tbody></table></td></tr><tr><td>CTM_DC1</td><td>CTM_TABLE1</td><td>CTM_APP1</td><td>CTM_JOB_NAME1</td><td>false</td><td>Interval</td><td>None</td><td>-</td><td>None</td><td>None</td><td>Some(00001M)</td><td>Some(Ctm Test Job 1)</td><td>Job</td><td><table border="1">
+					<tbody><tr><td>TEST_CONTROL1-RES</td><td>E</td></tr><tr><td>TEST_CONTROL2-RES</td><td>E</td></tr>
+				</tbody></table></td><td><table border="1">
+          <tbody><tr><td>INCOND1-ENDED</td><td>AND</td><td>STAT</td></tr><tr><td>INCOND2-ENDED</td><td>AND</td><td>STAT</td></tr>
+        </tbody></table></td><td><table border="1">
+          <tbody><tr><td>OUTCOND1-ENDED</td><td>DEL</td><td>STAT</td></tr><tr><td>OUTCOND2-ENDED</td><td>DEL</td><td>STAT</td></tr>
+        </tbody></table></td></tr><tr><td>CTM_DC1</td><td>CTM_TABLE1</td><td>CTM_APP2</td><td>CTM_JOB_NAME2</td><td>false</td><td>Interval</td><td>None</td><td>-</td><td>None</td><td>None</td><td>Some(00001M)</td><td>Some(Ctm Test Job 1)</td><td>Job</td><td><table border="1">
+					<tbody><tr><td>TEST_CONTROL1-RES</td><td>E</td></tr><tr><td>TEST_CONTROL2-RES</td><td>E</td></tr>
+				</tbody></table></td><td><table border="1">
+          <tbody><tr><td>INCOND1-ENDED</td><td>AND</td><td>STAT</td></tr><tr><td>INCOND2-ENDED</td><td>AND</td><td>STAT</td></tr>
+        </tbody></table></td><td><table border="1">
+          <tbody><tr><td>OUTCOND1-ENDED</td><td>DEL</td><td>STAT</td></tr><tr><td>OUTCOND2-ENDED</td><td>DEL</td><td>STAT</td></tr>
+        </tbody></table></td></tr><tr><td>CTM_DC2</td><td>CTM_TABLE2</td><td>CTM_APP1</td><td>CTM_JOB_NAME3</td><td>false</td><td>Interval</td><td>None</td><td>-</td><td>None</td><td>None</td><td>Some(00001M)</td><td>Some(Ctm Test Job 1)</td><td>Job</td><td><table border="1">
+					<tbody><tr><td>TEST_CONTROL1-RES</td><td>E</td></tr><tr><td>TEST_CONTROL2-RES</td><td>E</td></tr>
+				</tbody></table></td><td><table border="1">
+          <tbody><tr><td>INCOND1-ENDED</td><td>AND</td><td>STAT</td></tr><tr><td>INCOND2-ENDED</td><td>AND</td><td>STAT</td></tr>
+        </tbody></table></td><td><table border="1">
+          <tbody><tr><td>OUTCOND1-ENDED</td><td>DEL</td><td>STAT</td></tr><tr><td>OUTCOND2-ENDED</td><td>DEL</td><td>STAT</td></tr>
+        </tbody></table></td></tr><tr><td>CTM_DC2</td><td>CTM_TABLE2</td><td>CTM_APP4</td><td>CTM_JOB_NAME4</td><td>false</td><td>Interval</td><td>None</td><td>-</td><td>None</td><td>None</td><td>Some(00001M)</td><td>Some(Ctm Test Job 1)</td><td>Job</td><td><table border="1">
+					<tbody><tr><td>TEST_CONTROL1-RES</td><td>E</td></tr><tr><td>TEST_CONTROL2-RES</td><td>E</td></tr>
+				</tbody></table></td><td><table border="1">
+          <tbody><tr><td>INCOND1-ENDED</td><td>AND</td><td>STAT</td></tr><tr><td>INCOND2-ENDED</td><td>AND</td><td>STAT</td></tr>
+        </tbody></table></td><td><table border="1">
+          <tbody><tr><td>OUTCOND1-ENDED</td><td>DEL</td><td>STAT</td></tr><tr><td>OUTCOND2-ENDED</td><td>DEL</td><td>STAT</td></tr>
+        </tbody></table></td></tr>
+    </tbody></table>
+				<p></p><hr><p></p>
+        <table border="1">
+			<tbody><tr>
+				<th>File</th><th>Status</th><th>Number of jobs</th>
+			</tr>
+			<tr><td>D:\Projects2\Scala\parse_control-m_jobs\ctm_jobs\test3\cyclic_jobs1.xml</td><td>Ok</td><td>8</td></tr><tr><td>D:\Projects2\Scala\parse_control-m_jobs\ctm_jobs\test3\single_job1.xml</td><td>Ok</td><td>1</td></tr><tr><td>D:\Projects2\Scala\parse_control-m_jobs\ctm_jobs\test3\single_job2.xml</td><td>Ok</td><td>1</td></tr><tr><td>D:\Projects2\Scala\parse_control-m_jobs\ctm_jobs\test3\two_jobs_in_one_table1.xml</td><td>Ok</td><td>2</td></tr><tr><td>D:\Projects2\Scala\parse_control-m_jobs\ctm_jobs\test3\two_tables_with_two_jobs_each.xml</td><td>Ok</td><td>4</td></tr>
+		</tbody></table>
+    	</body></html>
